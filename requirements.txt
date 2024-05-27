@@ -1,0 +1,7 @@
+accelerate==0.29.3
+ir-datasets==0.5.6
+ir-measures==0.3.3
+pyterrier-colbert @ git+https://github.com/terrierteam/pyterrier_colbert.git@5772d080bba50955f589ac3f87e9933f2122a126
+pyterrier-pisa==0.0.6
+pyterrier-t5 @ git+https://github.com/terrierteam/pyterrier_t5.git@63756ebc2968ab03f46a61f0b391e27873226d75
+transformers==4.36.2
