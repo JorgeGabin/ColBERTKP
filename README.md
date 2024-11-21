@@ -90,3 +90,11 @@ Replicate the generabilisation experiment. Note that this code uses the results 
 ```
 python eval_monot5kp.py
 ```
+
+### Hybrid Queries Experiment
+
+Replicate the mixed queries experiment. Note that this code uses the results files in the repository, to avoid that change the `save_dir` parameter in `pt.Experiment`.
+
+```
+python eval_hybrid.py
+```
