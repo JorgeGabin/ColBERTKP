@@ -1,12 +1,26 @@
-# ColBERTKP
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-Supplementary materials for the paper _Beyond Questions: Leveraging ColBERT for Keyphrase Search_.
+<br />
+<br />
+<div align="center">
+  <p>
+    <img src="assets/ColBERTKP.png" alt="Logo" height="140">
+  </p>
+  <h3 align="center">ColBERTKP</h3>
+  <em align="center">
+    Beyond Questions: Leveraging ColBERT for Keyphrase Search
+  </em>
+</div>
 
 ## Environment Setup
 
-1. Follow the instructions to setup `pyterrier` found in the [repository](https://github.com/terrier-org/pyterrier).
+1. Follow the instructions to set up `pyterrier` found in the [repository](https://github.com/terrier-org/pyterrier).
 2. Install additional packages: `pip install requirements.txt`
-3. Trained models will be made available when the anonimisation process ends.
+3. Trained models will be made available when the anonymisation process ends.
 
 ## Training Keyphrase Models
 
@@ -51,7 +65,7 @@ python -m colbert.train_encoder_only --amp --doc_maxlen 180 --mask-punctuation -
 
 To replicate this work we need to create two different indices: one for the default ColBERT model and for the ColBERTKP<sub>Q</sub>, and the other one for ColBERTKP<sub>QD</sub>.
 
-We can create a new index using the `pyterrier_colbert` library. Use the dafault ColBERT checkpoint or the ColBERTKP<sub>QD</sub> depending on the model you aim to test.
+We can create a new index using the `pyterrier_colbert` library. Use the default ColBERT checkpoint or the ColBERTKP<sub>QD</sub> depending on the model you aim to test.
 
 ```
 from pyterrier_colbert.indexing import ColBERTIndexer
@@ -77,7 +91,7 @@ python eval_e2e.py
 
 ### Manual Queries Experiment
 
-Replicate the manually labelled queries experiment. Note that this code uses the results files in the repository, to avoid that change the `save_dir` parameter in `pt.Experiment`.
+Replicate the manually labelled queries experiment. Note that this code uses the results files in the repository, to avoid that, change the `save_dir` parameter in `pt.Experiment`.
 
 ```
 python eval_manual_kps.py
@@ -85,7 +99,7 @@ python eval_manual_kps.py
 
 ### MonoT5KP Experiment
 
-Replicate the generabilisation experiment. Note that this code uses the results files in the repository, to avoid that change the `save_dir` parameter in `pt.Experiment`. The model is available but toy can train your own model using the [pygaggle](https://github.com/castorini/pygaggle/blob/master/docs/experiments-monot5-gpu.md) library.
+Replicate the generalisation experiment. Note that this code uses the results files in the repository, to avoid that change the `save_dir` parameter in `pt.Experiment`. The model is available but toy can train your own model using the [pygaggle](https://github.com/castorini/pygaggle/blob/master/docs/experiments-monot5-gpu.md) library.
 
 ```
 python eval_monot5kp.py
@@ -93,8 +107,21 @@ python eval_monot5kp.py
 
 ### Hybrid Queries Experiment
 
-Replicate the mixed queries experiment. Note that this code uses the results files in the repository, to avoid that change the `save_dir` parameter in `pt.Experiment`.
+Replicate the mixed queries experiment. Note that this code uses the results files in the repository, to avoid that, change the `save_dir` parameter in `pt.Experiment`.
 
 ```
 python eval_hybrid.py
 ```
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/JorgeGabin/ColBERTKP.svg?style=for-the-badge
+[contributors-url]: https://github.com/JorgeGabin/ColBERTKP/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JorgeGabin/ColBERTKP.svg?style=for-the-badge
+[forks-url]: https://github.com/JorgeGabin/ColBERTKP/network/members
+[stars-shield]: https://img.shields.io/github/stars/JorgeGabin/ColBERTKP.svg?style=for-the-badge
+[stars-url]: https://github.com/JorgeGabin/ColBERTKP/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JorgeGabin/ColBERTKP.svg?style=for-the-badge
+[issues-url]: https://github.com/JorgeGabin/ColBERTKP/issues
+[license-shield]: https://img.shields.io/github/license/JorgeGabin/ColBERTKP.svg?style=for-the-badge
+[license-url]: https://github.com/JorgeGabin/ColBERTKP/blob/master/LICENSE.txt
+
