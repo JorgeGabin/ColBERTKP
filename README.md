@@ -113,6 +113,25 @@ Replicate the mixed queries experiment. Note that this code uses the results fil
 python eval_hybrid.py
 ```
 
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@article{gabin2025beyond,
+  title = {Beyond questions: Leveraging ColBERT for keyphrase search},
+  journal = {Information Processing & Management},
+  volume = {63},
+  number = {2, Part B},
+  pages = {104480},
+  year = {2026},
+  issn = {0306-4573},
+  doi = {https://doi.org/10.1016/j.ipm.2025.104480},
+  url = {https://www.sciencedirect.com/science/article/pii/S0306457325004212},
+  author = {Jorge Gabín and Javier Parapar and Craig Macdonald},
+}
+```
+
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/JorgeGabin/ColBERTKP.svg?style=for-the-badge
 [contributors-url]: https://github.com/JorgeGabin/ColBERTKP/graphs/contributors
